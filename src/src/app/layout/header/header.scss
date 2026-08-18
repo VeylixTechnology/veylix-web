@@ -41,17 +41,18 @@
   }
 }
 .brand__logo {
-  height: 44px;
+  height: 40px;
   width: auto;
-  max-width: 180px;
+  max-width: 160px;
   display: block;
   object-fit: contain;
+  object-position: center;
   transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 8px rgba(11, 30, 59, 0.06));
+  filter: drop-shadow(0 1px 3px rgba(11, 30, 59, 0.08));
 
   .brand:hover & {
-    filter: drop-shadow(0 8px 16px rgba(11, 30, 59, 0.2));
-    transform: scale(1.05);
+    filter: drop-shadow(0 4px 12px rgba(11, 30, 59, 0.15));
+    transform: scale(1.03);
   }
 }
 
@@ -92,7 +93,7 @@
   z-index: 1;
 }
 .brand__name {
-  display: flex;
+  display: none;
   flex-direction: column;
   line-height: 1.1;
 }
