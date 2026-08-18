@@ -5,10 +5,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "ng build",
+    "build": "ng build --configuration production",
+    "build:prod": "ng build --configuration production --optimization --build-optimizer --aot --source-map=false",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "analyze": "ng build --configuration production --stats-json && webpack-bundle-analyzer dist/veylix-web/stats.json"
   },
   "private": true,
   "dependencies": {
