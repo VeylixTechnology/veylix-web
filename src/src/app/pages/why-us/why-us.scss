@@ -1,6 +1,32 @@
+.why-card {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: var(--radius-lg);
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(201, 165, 78, 0.3), rgba(63, 104, 168, 0.2), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
 .why-card h3 {
   font-size: 1.12rem;
   margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+.why-card:hover h3 {
+  color: var(--gold-500);
 }
 .why-card p {
   font-size: 0.94rem;

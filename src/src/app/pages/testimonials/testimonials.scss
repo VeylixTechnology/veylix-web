@@ -6,14 +6,30 @@
   border-radius: var(--radius-lg);
   padding: 34px 30px 28px;
   backdrop-filter: blur(6px);
-  transition: transform 0.35s var(--ease), background 0.35s var(--ease),
-    border-color 0.35s var(--ease);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   overflow: hidden;
-}
-.tcard:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(201, 165, 78, 0.5);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(201, 165, 78, 0.6);
+
+    &::before {
+      opacity: 1;
+    }
+  }
 }
 .tcard__quote {
   font-size: 48px !important;
@@ -43,12 +59,22 @@
   font-family: 'Sora', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
+  transition: all 0.3s ease;
+
+  .tcard:hover & {
+    transform: scale(1.15);
+    box-shadow: 0 8px 16px rgba(201, 165, 78, 0.3);
+  }
 }
 .tcard__meta strong {
   display: block;
   color: #fff;
   font-family: 'Sora', sans-serif;
   font-size: 0.98rem;
+  transition: color 0.3s ease;
+}
+.tcard:hover .tcard__meta strong {
+  color: var(--gold-100);
 }
 .tcard__meta small {
   color: rgba(255, 255, 255, 0.6);
@@ -62,4 +88,16 @@
 .tcard__stars .material-icons-round {
   font-size: 18px;
   color: var(--gold-400);
+  transition: all 0.3s ease;
+
+  .tcard:hover & {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+  }
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      transition-delay: #{$i * 50}ms;
+    }
+  }
 }
