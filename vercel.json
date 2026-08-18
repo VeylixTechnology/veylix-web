@@ -1,7 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist/veylix-web",
-  "nodeVersion": "20.x",
   "headers": [
     {
       "source": "/(.*)",
