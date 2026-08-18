@@ -25,6 +25,14 @@
   display: flex;
   gap: 16px;
   align-items: flex-start;
+  transition: all 0.3s ease;
+  padding: 12px 16px;
+  border-radius: 12px;
+
+  &:hover {
+    background: rgba(201, 165, 78, 0.05);
+    transform: translateX(4px);
+  }
 }
 .about__highlight-icon {
   width: 46px;
@@ -35,6 +43,13 @@
   flex-shrink: 0;
   background: linear-gradient(135deg, rgba(201, 165, 78, 0.16), rgba(11, 30, 59, 0.06));
   color: var(--navy-800);
+  transition: all 0.3s ease;
+
+  .about__highlight:hover & {
+    background: linear-gradient(135deg, var(--gold-400), var(--gold-300));
+    color: var(--navy-900);
+    transform: scale(1.1);
+  }
 }
 .about__highlight h4 {
   font-size: 1.05rem;
@@ -151,24 +166,42 @@
 }
 .leadership {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
   max-width: 860px;
   margin-inline: auto;
 }
 .leader {
-  background: #fff;
+  background: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.5));
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 32px;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease),
-    border-color 0.35s var(--ease);
-}
-.leader:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(203, 167, 90, 0.5);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 165, 78, 0.4), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(201, 165, 78, 0.4);
+
+    &::before {
+      opacity: 1;
+    }
+  }
 }
 .leader__avatar {
   width: 64px;

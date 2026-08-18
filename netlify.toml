@@ -1,0 +1,60 @@
+[build]
+command = "npm run build"
+publish = "dist/veylix-web"
+
+[build.environment]
+NODE_VERSION = "20"
+NODE_ENV = "production"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "SAMEORIGIN"
+X-Content-Type-Options = "nosniff"
+X-XSS-Protection = "1; mode=block"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+for = "*.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+Content-Type = "text/javascript; charset=utf-8"
+
+[[headers]]
+for = "*.css"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+Content-Type = "text/css; charset=utf-8"
+
+[[headers]]
+for = "*.woff2"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+Content-Type = "font/woff2"
+
+[[headers]]
+for = "/index.html"
+[headers.values]
+Cache-Control = "max-age=0, no-cache, no-store, must-revalidate"
+Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+for = "/*.png"
+[headers.values]
+Cache-Control = "public, max-age=2592000, immutable"
+
+[[headers]]
+for = "/*.jpg"
+[headers.values]
+Cache-Control = "public, max-age=2592000, immutable"
+
+[[headers]]
+for = "/*.svg"
+[headers.values]
+Cache-Control = "public, max-age=2592000, immutable"

@@ -1,0 +1,8 @@
+# This file is used by the build system to adjust CSS and JS output to support the specified browsers below
+# For more information, please see:
+# https://github.com/browserslist/browserslist
+
+# For production builds, optimize for modern browsers
+last 2 versions
+not dead
+not IE 11
