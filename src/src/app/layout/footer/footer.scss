@@ -29,18 +29,17 @@
   margin-bottom: 20px;
 }
 .footer__brand .brand__logo {
-  height: 50px;
+  height: 48px;
   width: auto;
-  max-width: 180px;
+  max-width: 200px;
   display: block;
   object-fit: contain;
-  object-position: center;
-  filter: drop-shadow(0 1px 3px rgba(255, 255, 255, 0.1));
+  filter: drop-shadow(0 2px 8px rgba(11, 30, 59, 0.1));
   transition: all 0.3s ease;
 
   .brand:hover & {
-    filter: drop-shadow(0 4px 12px rgba(201, 165, 78, 0.2));
-    transform: scale(1.03);
+    filter: drop-shadow(0 8px 16px rgba(11, 30, 59, 0.2));
+    transform: scale(1.05);
   }
 }
 .brand__mark {
@@ -56,10 +55,6 @@
   font-weight: 800;
   color: var(--navy-900);
 }
-.footer__brand .brand__name {
-  display: none;
-}
-
 .brand__name {
   font-family: 'Sora', sans-serif;
   font-weight: 700;
