@@ -11,13 +11,13 @@ import { RevealDirective } from '../reveal.directive';
     <section class="cta">
       <div class="cta__glow"></div>
       <div class="container cta__inner" reveal>
-        <span class="eyebrow">Let's build together</span>
+        <span class="eyebrow">Get Started</span>
         <h2 class="cta__title">
-          Ready to build your next <span class="text-gradient">software solution?</span>
+          Let's explore how we can <span class="text-gradient">modernize your operations</span>
         </h2>
         <p class="cta__text muted">
-          Tell us about your challenge and we'll show you how custom software and AI can
-          transform your operations.
+          Share your objectives and constraints. We'll outline how custom software and AI address
+          your specific challenges.
         </p>
         <div class="cta__actions">
           <a routerLink="/contact" class="btn btn-primary">

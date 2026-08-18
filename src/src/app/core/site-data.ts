@@ -17,7 +17,7 @@ export interface Company {
 export const COMPANY: Company = {
   name: 'Veylix Tech',
   shortName: 'Veylix Tech',
-  tagline: 'Rooted in Values. Powered by Technology.',
+  tagline: 'Enterprise Software. AI Innovation. Real Impact.',
   footerTagline: 'Custom Software. Intelligent Solutions. Real Business Impact.',
   founder: 'Vishal Mahajan',
   coFounder: 'Priyanka Shinde',
@@ -58,37 +58,37 @@ export const CAPABILITIES: Feature[] = [
     icon: 'business_center',
     title: 'Business Software',
     description:
-      'Centralized platforms that replace spreadsheets and connect your teams, data and daily operations.',
+      'Centralized platforms that consolidate operations, eliminate spreadsheet fragmentation, and enable unified reporting.',
   },
   {
     icon: 'dashboard_customize',
     title: 'Custom Applications',
     description:
-      'Tailor-made applications engineered precisely around your unique workflows and business rules.',
+      'Purpose-built applications engineered to your exact workflows, compliance requirements, and operational logic.',
   },
   {
     icon: 'account_balance',
     title: 'Financial Applications',
     description:
-      'Robust treasury, cashflow and financial reporting systems built for accuracy and compliance.',
+      'Treasury, GL, and financial reporting systems built to institutional standards for accuracy and auditability.',
   },
   {
     icon: 'api',
     title: 'Web & API Development',
     description:
-      'Modern, scalable web applications and secure APIs that integrate cleanly with your ecosystem.',
+      'Scalable web platforms and enterprise-grade APIs that integrate securely across your technology stack.',
   },
   {
     icon: 'smart_toy',
     title: 'AI Solutions',
     description:
-      'Chatbots, assistants, RAG and AI agents that turn your documents and data into intelligent action.',
+      'Production-ready AI agents, chatbots, and retrieval-augmented systems that automate decisions and operations.',
   },
   {
     icon: 'cloud_sync',
-    title: 'DevOps',
+    title: 'DevOps & Cloud',
     description:
-      'CI/CD pipelines, cloud deployment and automation that ship reliably and scale on demand.',
+      'Automated deployment pipelines, infrastructure-as-code, and cloud architecture optimized for reliability.',
   },
 ];
 
@@ -120,91 +120,91 @@ export const SERVICES: Service[] = [
     icon: 'contacts',
     title: 'CRM Software',
     description:
-      'Manage leads, customers and sales pipelines in one centralized, insight-driven platform.',
+      'Unified customer management platform that tracks interactions, automates workflows, and enables data-driven sales.',
   },
   {
     category: 'Business',
     icon: 'inventory_2',
-    title: 'Inventory Management System',
+    title: 'Inventory Management',
     description:
-      'Track stock, movements and valuations in real time with automated alerts and reporting.',
+      'Real-time stock tracking with automated replenishment alerts, valuations, and movement audits.',
   },
   {
     category: 'Business',
     icon: 'badge',
-    title: 'Employee Management System',
+    title: 'HR & Payroll Systems',
     description:
-      'Digitize HR, attendance, roles and employee records with secure role-based access.',
+      'Centralized employee records, compliance tracking, and payroll automation with full audit trails.',
   },
   {
     category: 'Business',
     icon: 'admin_panel_settings',
-    title: 'Admin Portal Development',
+    title: 'Admin Portals',
     description:
-      'Powerful back-office portals to configure, monitor and control your entire operation.',
+      'Secure back-office control centers for configuration, monitoring, and operational oversight.',
   },
   {
     category: 'Finance',
     icon: 'account_balance',
-    title: 'Financial Software Solutions',
+    title: 'Financial Software',
     description:
-      'Treasury, cashflow, GL and MIS reporting systems engineered for accuracy and control.',
+      'Treasury, cashflow forecasting, and GL reporting systems built to institutional compliance standards.',
   },
   {
     category: 'Web',
     icon: 'language',
-    title: 'Web Application Development',
+    title: 'Web Applications',
     description:
-      'Fast, responsive and scalable web apps built with Angular and modern best practices.',
+      'Enterprise-grade web platforms built on modern architectures with responsive design and performance.',
   },
   {
     category: 'Web',
     icon: 'api',
     title: 'API Development',
     description:
-      'Secure, well-documented REST APIs that power integrations across your systems.',
+      'RESTful APIs with comprehensive documentation, security controls, and seamless third-party integration.',
   },
   {
     category: 'AI',
     icon: 'chat',
-    title: 'AI Chatbot Development',
+    title: 'AI Chatbots',
     description:
-      'Conversational chatbots that engage users and automate support around the clock.',
+      'Conversational interfaces for customer engagement and support automation with continuous learning.',
   },
   {
     category: 'AI',
     icon: 'support_agent',
-    title: 'AI Business Assistant',
+    title: 'Business Assistants',
     description:
-      'An intelligent assistant that answers business questions from your documents and data.',
+      'AI systems trained on your knowledge base to answer questions and accelerate decision-making.',
   },
   {
     category: 'AI',
     icon: 'psychology',
     title: 'LLM Integration',
     description:
-      'Integrate OpenAI and Azure OpenAI models securely into your products and workflows.',
+      'Secure, scalable integration of OpenAI and Azure models into production applications.',
   },
   {
     category: 'AI',
     icon: 'find_in_page',
-    title: 'RAG Application Development',
+    title: 'Retrieval-Augmented Systems',
     description:
-      'Retrieval-augmented generation apps that ground AI answers in your trusted knowledge.',
+      'AI systems grounded in your proprietary data for accurate, contextual answers and reduced hallucination.',
   },
   {
     category: 'AI',
     icon: 'precision_manufacturing',
-    title: 'AI Agent Development',
+    title: 'AI Agents',
     description:
-      'Autonomous AI agents that reason, use tools and execute multi-step business tasks.',
+      'Autonomous systems that reason, execute multi-step tasks, and integrate with your workflows.',
   },
   {
     category: 'AI',
     icon: 'analytics',
-    title: 'AI-Powered Reporting',
+    title: 'AI-Driven Analytics',
     description:
-      'Natural-language insights and automated narratives generated from your operational data.',
+      'Automated insights and narrative generation from operational data for faster decision-making.',
   },
 ];
 
@@ -212,45 +212,45 @@ export const SERVICES: Service[] = [
 export const SOLUTIONS: Feature[] = [
   {
     icon: 'sync_alt',
-    title: 'Business Process Automation',
+    title: 'Process Automation',
     description:
-      'Eliminate repetitive manual work with automated, rule-driven digital workflows.',
+      'Replace manual workflows with rule-driven automation to reduce errors and accelerate execution.',
   },
   {
     icon: 'swap_horiz',
-    title: 'Excel To Web Application Conversion',
+    title: 'Spreadsheet to Software Migration',
     description:
-      'Transform fragile spreadsheets into secure, multi-user web applications with audit trails.',
+      'Convert legacy spreadsheets into secure, auditable, multi-user web applications with data integrity.',
   },
   {
     icon: 'payments',
-    title: 'Financial Management Solutions',
+    title: 'Financial Modernization',
     description:
-      'Manage cashflow, investments and financial reporting from a single source of truth.',
+      'Implement treasury, cashflow, and GL systems to establish a single source of truth for finance.',
   },
   {
     icon: 'dashboard',
-    title: 'Reporting & Dashboard Systems',
+    title: 'Business Intelligence Systems',
     description:
-      'Real-time dashboards and rich reports that give leaders instant operational visibility.',
+      'Real-time dashboards and automated reports that provide instant visibility to leadership.',
   },
   {
     icon: 'support_agent',
-    title: 'AI Business Assistant Solutions',
+    title: 'AI-Powered Intelligence',
     description:
-      'Deploy AI assistants that understand your business and accelerate decision-making.',
+      'Deploy AI systems that extract insights from your data and augment decision-making.',
   },
   {
     icon: 'integration_instructions',
-    title: 'API Integration Solutions',
+    title: 'System Integration',
     description:
-      'Connect ERPs, banks, payment gateways and third-party services into one workflow.',
+      'Connect ERPs, financial platforms, payment systems, and third-party services into cohesive workflows.',
   },
   {
     icon: 'rocket_launch',
-    title: 'Digital Transformation Solutions',
+    title: 'Digital Transformation',
     description:
-      'End-to-end modernization that moves your organization from manual to intelligent.',
+      'Comprehensive modernization from legacy operations to intelligent, automated platforms.',
   },
 ];
 
@@ -280,12 +280,12 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     name: 'DigiTreasury',
-    description: 'Enterprise Treasury & Financial Management Platform',
+    description: 'Enterprise treasury platform consolidating investment tracking, cashflow forecasting, and financial reporting in one system.',
     features: [
-      'Investment MIS Reports',
-      'Cashflow Management',
-      'GL Reports',
-      'Financial Reporting',
+      'Investment MIS Reporting',
+      'Real-Time Cashflow Forecasts',
+      'GL Reconciliation',
+      'Compliance Reporting',
       'Workflow Automation',
     ],
     technologies: ['Angular', '.NET', 'SQL Server'],
@@ -295,12 +295,12 @@ export const PROJECTS: Project[] = [
   {
     name: 'AI Business Assistant',
     description:
-      'AI-powered assistant that answers business questions using company documents and operational data.',
+      'AI-powered platform that extracts insights from company documents and operational data, enabling instant answers to business questions.',
     features: [
-      'AI Chat Interface',
-      'RAG Search',
+      'Conversational Interface',
+      'Document Search & Retrieval',
       'LLM Integration',
-      'Business Knowledge Assistant',
+      'Knowledge Base Management',
     ],
     technologies: ['Angular', 'OpenAI', 'RAG', 'Python'],
     icon: 'smart_toy',
@@ -308,12 +308,12 @@ export const PROJECTS: Project[] = [
   },
   {
     name: 'Business Management System',
-    description: 'A unified platform to run day-to-day business operations end to end.',
+    description: 'Integrated platform automating core business operations, from user management and workflows to reporting and compliance.',
     features: [
-      'User Management',
-      'Workflow Automation',
-      'Reports & Dashboards',
-      'Role-Based Access',
+      'Role-Based Access Control',
+      'Process Automation',
+      'Real-Time Dashboards',
+      'Audit Trail & Compliance',
     ],
     technologies: ['Angular', '.NET Core', 'SQL Server'],
     icon: 'dashboard_customize',
@@ -333,51 +333,51 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: 1,
     icon: 'assignment',
-    title: 'Requirement Gathering',
+    title: 'Requirements & Discovery',
     description:
-      'We listen closely to understand your goals, challenges and success criteria in detail.',
+      'In-depth conversations to understand your objectives, constraints, success metrics, and technical environment.',
   },
   {
     step: 2,
     icon: 'query_stats',
-    title: 'Analysis & Planning',
+    title: 'Analysis & Architecture',
     description:
-      'We define scope, architecture and a clear roadmap with realistic milestones and estimates.',
+      'Define scope, technical architecture, implementation timeline, and detailed project roadmap.',
   },
   {
     step: 3,
     icon: 'design_services',
-    title: 'UI/UX Design',
+    title: 'Design & Prototyping',
     description:
-      'We craft intuitive, modern interfaces and interactive prototypes for your review.',
+      'Create intuitive user interfaces and interactive prototypes validated with your team.',
   },
   {
     step: 4,
     icon: 'code',
     title: 'Development',
     description:
-      'We build in agile iterations using clean, scalable and maintainable code.',
+      'Iterative development using modern frameworks, clean architecture, and continuous integration practices.',
   },
   {
     step: 5,
     icon: 'bug_report',
-    title: 'Testing',
+    title: 'Testing & QA',
     description:
-      'We rigorously test functionality, performance and security before every release.',
+      'Comprehensive testing including functionality, performance, security, and user acceptance verification.',
   },
   {
     step: 6,
     icon: 'rocket_launch',
-    title: 'Deployment',
+    title: 'Deployment & Release',
     description:
-      'We deploy smoothly to the cloud with automated CI/CD pipelines and zero-drama releases.',
+      'Smooth production deployment with automated pipelines, comprehensive documentation, and zero downtime.',
   },
   {
     step: 7,
     icon: 'support',
-    title: 'Support & Enhancement',
+    title: 'Support & Optimization',
     description:
-      'We provide reliable long-term support and continuously enhance your solution.',
+      'Ongoing technical support, performance monitoring, security updates, and continuous improvements.',
   },
 ];
 
@@ -385,43 +385,43 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export const WHY_REASONS: Feature[] = [
   {
     icon: 'tune',
-    title: 'Custom Solution Approach',
-    description: 'Every solution is engineered around your exact processes — never one-size-fits-all.',
+    title: 'Custom Engineering',
+    description: 'Solutions architected around your processes, compliance needs, and competitive advantages—never templated software.',
   },
   {
     icon: 'workspace_premium',
-    title: 'Strong Technical Expertise',
-    description: 'A team fluent in modern architectures, best practices and clean engineering.',
+    title: 'Deep Technical Depth',
+    description: 'Full-stack expertise in enterprise architectures, modern frameworks, clean code practices, and system design.',
   },
   {
     icon: 'account_balance',
-    title: 'Financial Domain Knowledge',
-    description: 'Deep experience building treasury, cashflow and financial reporting systems.',
+    title: 'Financial Domain Expertise',
+    description: 'Proven track record building treasury systems, compliance-grade financial platforms, and audit-ready reporting.',
   },
   {
     icon: 'smart_toy',
-    title: 'AI Integration Capabilities',
-    description: 'Practical, production-grade AI: chatbots, assistants, RAG and autonomous agents.',
+    title: 'Production AI Implementation',
+    description: 'End-to-end AI capability—from architecture and model integration to deployment and ongoing optimization.',
   },
   {
     icon: 'architecture',
-    title: 'Scalable Architecture',
-    description: 'Solutions designed to grow effortlessly with your users, data and ambitions.',
+    title: 'Enterprise-Grade Architecture',
+    description: 'Scalable systems designed for growth—handling increased users, data volume, and operational complexity.',
   },
   {
     icon: 'verified',
-    title: 'Reliable Delivery',
-    description: 'Predictable timelines, transparent communication and dependable outcomes.',
+    title: 'Predictable Delivery',
+    description: 'Transparent process, realistic timelines, frequent communication, and outcomes that match commitments.',
   },
   {
     icon: 'auto_awesome',
-    title: 'Modern Technologies',
-    description: 'We build with today\u2019s best tools so your product stays future-ready.',
+    title: 'Modern Technology Stack',
+    description: 'Built on proven frameworks and platforms that minimize technical debt and support long-term maintenance.',
   },
   {
     icon: 'handshake',
-    title: 'Long-Term Support',
-    description: 'A committed partner for ongoing maintenance, enhancements and growth.',
+    title: 'Ongoing Partnership',
+    description: 'Dedicated support, proactive maintenance, and continuous enhancement as your business evolves.',
   },
 ];
 
@@ -485,10 +485,10 @@ export const CONTACT_SERVICES: string[] = [
 
 /* ---------------- Stats ---------------- */
 export const STATS: { value: string; label: string }[] = [
-  { value: '13+', label: 'Services Offered' },
+  { value: '13+', label: 'Core Services' },
   { value: '10+', label: 'Industries Served' },
-  { value: '100%', label: 'Custom Built' },
-  { value: '24/7', label: 'Support Mindset' },
+  { value: '100%', label: 'Custom-Built Solutions' },
+  { value: '24/7', label: 'Dedicated Support' },
 ];
 
 /* ---------------- About ---------------- */
@@ -499,8 +499,8 @@ export interface AboutHighlight {
 }
 
 export const ABOUT_INTRO: string[] = [
-  'Veylix Tech is a software development and AI solutions company that helps organizations replace manual, spreadsheet-driven operations with secure, scalable and intelligent digital platforms.',
-  'From custom business applications and financial software to advanced AI assistants and automation, we partner with growing businesses and enterprises to design, build and support solutions that deliver measurable impact.',
+  'Veylix Tech engineers custom software and AI systems for organizations transitioning from manual operations to intelligent, automated platforms. We specialize in business applications, financial software, and production-grade AI that directly improve operational efficiency and decision-making.',
+  'Our approach combines technical depth in modern architectures with domain expertise in finance, automation, and AI integration. We deliver comprehensive solutions—from requirements through ongoing support—designed around your specific business model, compliance needs, and growth trajectory.',
 ];
 
 export const ABOUT_HIGHLIGHTS: AboutHighlight[] = [
@@ -508,19 +508,19 @@ export const ABOUT_HIGHLIGHTS: AboutHighlight[] = [
     icon: 'flag',
     title: 'Our Mission',
     description:
-      'To engineer dependable software and AI that automate operations and accelerate business growth.',
+      'Build software and AI systems that reduce manual work, improve operational visibility, and enable faster business decisions.',
   },
   {
     icon: 'visibility',
     title: 'Our Vision',
     description:
-      'To be the trusted technology partner that transforms how businesses operate through intelligent software.',
+      'Become the engineering partner enterprises trust to modernize operations and compete in a digital-first market.',
   },
   {
     icon: 'diversity_3',
     title: 'Our Values',
     description:
-      'Integrity, craftsmanship and long-term partnership — rooted in values, powered by technology.',
+      'Technical integrity, transparent communication, reliable delivery, and long-term partnership.',
   },
 ];
 
@@ -535,17 +535,11 @@ export interface Founder {
 
 export const FOUNDERS: Founder[] = [
   {
-    name: 'Vishal Mahajan',
-    role: 'Founder',
-    initials: 'VM',
-    bio: 'Drives Veylix Tech’s vision and engineering, building custom software and AI solutions that create real business impact.',
-    email: 'vishalm.techveylix@gmail.com',
-  },
-  {
-    name: 'Priyanka Shinde',
-    role: 'Co-Founder',
-    initials: 'PS',
-    bio: 'Leads delivery and client partnerships, ensuring every solution is reliable, scalable and built around customer needs.',
+    name: "Vishal Mahajan",
+    role: "Founder",
+    initials: "VM",
+    bio: "Software architect with deep expertise in enterprise applications, financial systems, and AI integration. Leads technical strategy and engineering excellence at Veylix Tech.",
+    email: "vishalm.techveylix@gmail.com",
   },
 ];
 
@@ -560,23 +554,23 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      'Veylix Tech replaced our fragile Excel processes with a centralized platform. Reporting that took days now happens in real time.',
+      'Replaced fragmented Excel-based reporting with a unified platform. Financial dashboards that previously took two days now update in real time, giving leadership instant visibility.',
     name: 'Finance Director',
     role: 'Treasury & Finance',
     initials: 'FD',
   },
   {
     quote:
-      'Their AI business assistant genuinely understands our documents and data. It has become part of how our team makes decisions every day.',
+      'The AI business assistant has fundamentally changed how we access operational data. It understands context and delivers answers our team actually relies on for daily decisions.',
     name: 'Operations Head',
     role: 'Manufacturing Enterprise',
     initials: 'OH',
   },
   {
     quote:
-      'Professional, reliable and technically excellent. They delivered a scalable system on time and continue to support us as we grow.',
+      'Technical depth combined with reliable execution. Delivered a production-ready system on schedule, with continued support as we scale operations and add new capabilities.',
     name: 'Managing Director',
-    role: 'Growing SME',
+    role: 'SME Growth',
     initials: 'MD',
   },
 ];
