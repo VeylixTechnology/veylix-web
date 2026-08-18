@@ -28,6 +28,20 @@
   gap: 12px;
   margin-bottom: 20px;
 }
+.footer__brand .brand__logo {
+  height: 48px;
+  width: auto;
+  max-width: 200px;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(11, 30, 59, 0.1));
+  transition: all 0.3s ease;
+
+  .brand:hover & {
+    filter: drop-shadow(0 8px 16px rgba(11, 30, 59, 0.2));
+    transform: scale(1.05);
+  }
+}
 .brand__mark {
   width: 44px;
   height: 44px;
