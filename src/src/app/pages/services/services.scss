@@ -1,0 +1,43 @@
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+.service-card__tag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+  background: rgba(201, 165, 78, 0.12);
+  padding: 5px 11px;
+  border-radius: 999px;
+}
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.service-card p {
+  flex: 1;
+}
+.service-card__foot {
+  margin-top: 20px;
+}
+.service-card__foot .material-icons-round {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--mist-2);
+  color: var(--navy-700);
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease);
+}
+.service-card:hover .service-card__foot .material-icons-round {
+  background: var(--gradient-gold);
+  color: var(--navy-900);
+  transform: translateX(4px);
+}

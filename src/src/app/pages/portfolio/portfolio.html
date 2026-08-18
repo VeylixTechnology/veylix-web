@@ -1,0 +1,74 @@
+<app-page-hero
+  eyebrow="Portfolio"
+  title="Solutions we've engineered for real impact"
+  subtitle="A selection of platforms that automate finance, harness AI and streamline complex business operations."
+/>
+
+<section class="section">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Portfolio"
+      title="Solutions we've engineered for real impact"
+      subtitle="A selection of platforms that automate finance, harness AI and streamline complex business operations."
+      [center]="true"
+    />
+    <div class="projects">
+    @for (project of projects; track project.name; let i = $index) {
+      <article class="project" [class.project--reverse]="i % 2 === 1" reveal>
+        <!-- Screenshot placeholder -->
+        <div class="project__shot" [style.--accent]="project.accent">
+          <div class="shot">
+            <div class="shot__bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="shot__canvas">
+              <div class="shot__icon">
+                <span class="material-icons-round">{{ project.icon }}</span>
+              </div>
+              <div class="shot__lines">
+                <span style="width: 80%"></span>
+                <span style="width: 60%"></span>
+                <span style="width: 70%"></span>
+              </div>
+              <div class="shot__blocks">
+                <div></div><div></div><div></div>
+              </div>
+            </div>
+            <span class="shot__placeholder">Project Screenshot</span>
+          </div>
+          <span class="project__index">0{{ i + 1 }}</span>
+        </div>
+
+        <!-- Details -->
+        <div class="project__body">
+          <span class="eyebrow">Project 0{{ i + 1 }}</span>
+          <h2 class="project__name">{{ project.name }}</h2>
+          <p class="project__desc muted">{{ project.description }}</p>
+
+          <div class="project__features">
+            <h4>Key Features</h4>
+            <ul>
+              @for (feature of project.features; track feature) {
+                <li>
+                  <span class="material-icons-round">check_circle</span>
+                  {{ feature }}
+                </li>
+              }
+            </ul>
+          </div>
+
+          <div class="project__tech">
+            @for (tech of project.technologies; track tech) {
+              <span class="tech-pill">{{ tech }}</span>
+            }
+          </div>
+        </div>
+      </article>
+    }
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top: 0">
+  <app-cta-section />
+</section>

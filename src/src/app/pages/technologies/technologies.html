@@ -1,0 +1,43 @@
+<app-page-hero
+  eyebrow="Technology Stack"
+  title="A modern, battle-tested engineering stack"
+  subtitle="We build on proven, scalable technologies across frontend, backend, cloud and generative AI — so your solution stays fast and future-ready."
+/>
+
+<section class="section">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Our toolbox"
+      title="Technologies we work with"
+      subtitle="From Angular front ends to .NET services and cutting-edge GenAI, our stack is chosen for reliability and performance."
+      [center]="true"
+    />
+
+    <div class="tech-grid">
+      @for (group of stack; track group.title; let i = $index) {
+        <article
+          class="tech-card"
+          [class.tech-card--wide]="group.items.length > 4"
+          reveal
+          [revealDelay]="(i % 3) * 80"
+        >
+          <div class="tech-card__head">
+            <span class="tech-card__icon">
+              <span class="material-icons-round">{{ group.icon }}</span>
+            </span>
+            <h3>{{ group.title }}</h3>
+          </div>
+          <div class="tech-card__items">
+            @for (item of group.items; track item) {
+              <span class="tech-tag">{{ item }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top: 0">
+  <app-cta-section />
+</section>

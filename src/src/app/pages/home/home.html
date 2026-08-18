@@ -1,0 +1,178 @@
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero__bg">
+    <div class="hero__grid"></div>
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__content" reveal>
+      <span class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Custom Software &amp; AI Solutions
+      </span>
+      <h1 class="hero__title">
+        Custom Software Solutions for
+        <span class="text-gradient">Growing Businesses</span>
+      </h1>
+      <p class="hero__subtitle">
+        We build scalable business applications, financial software, and AI-powered
+        solutions that help organizations automate operations and accelerate growth.
+      </p>
+      <div class="hero__actions">
+        <a routerLink="/contact" class="btn btn-primary">
+          <span class="material-icons-round">rocket_launch</span> Get Free Consultation
+        </a>
+        <a routerLink="/portfolio" class="btn btn-outline">
+          <span class="material-icons-round">visibility</span> View Portfolio
+        </a>
+      </div>
+
+      <div class="hero__trust">
+        <span>Trusted approach for</span>
+        <div class="hero__trust-tags">
+          <span>Finance</span><span>Automation</span><span>AI</span><span>DevOps</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Illustration: floating app dashboard -->
+    <div class="hero__visual" reveal [revealDelay]="150">
+      <div class="mock">
+        <div class="mock__bar">
+          <span></span><span></span><span></span>
+          <div class="mock__title">RM Business Suite</div>
+        </div>
+        <div class="mock__body">
+          <div class="mock__kpis">
+            <div class="mock__kpi">
+              <small>Cashflow</small>
+              <strong>₹ 4.8M</strong>
+              <i class="up">+12.4%</i>
+            </div>
+            <div class="mock__kpi">
+              <small>Automation</small>
+              <strong>86%</strong>
+              <i class="up">+9.1%</i>
+            </div>
+            <div class="mock__kpi">
+              <small>Open Tasks</small>
+              <strong>124</strong>
+              <i class="down">-18%</i>
+            </div>
+          </div>
+          <div class="mock__chart">
+            <span style="height: 38%"></span>
+            <span style="height: 62%"></span>
+            <span style="height: 48%"></span>
+            <span style="height: 78%"></span>
+            <span style="height: 58%"></span>
+            <span style="height: 90%"></span>
+            <span style="height: 70%"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chip chip--ai">
+        <span class="material-icons-round">smart_toy</span>
+        <div><strong>AI Assistant</strong><small>RAG · LLM</small></div>
+      </div>
+      <div class="chip chip--report">
+        <span class="material-icons-round">insights</span>
+        <div><strong>Live Reports</strong><small>Real-time</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats">
+  <div class="container stats__inner" reveal>
+    @for (s of stats; track s.label) {
+      <div class="stats__item">
+        <strong class="text-gradient">{{ s.value }}</strong>
+        <span>{{ s.label }}</span>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- ================= CAPABILITIES ================= -->
+<section class="section">
+  <div class="container">
+    <app-section-heading
+      eyebrow="What we do"
+      title="End-to-end capabilities for modern business"
+      subtitle="From centralized business software to production-grade AI, we deliver the full stack of custom digital solutions."
+      [center]="true"
+    />
+    <div class="grid grid-3">
+      @for (cap of capabilities; track cap.title; let i = $index) {
+        <article class="card" reveal [revealDelay]="i * 70">
+          <div class="card-icon">
+            <span class="material-icons-round">{{ cap.icon }}</span>
+          </div>
+          <h3>{{ cap.title }}</h3>
+          <p class="muted">{{ cap.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM -> SOLUTION ================= -->
+<section class="section section--mist">
+  <div class="container">
+    <app-section-heading
+      eyebrow="From problem to solution"
+      title="We turn operational friction into digital advantage"
+      subtitle="Most businesses are held back by manual work and scattered data. We replace that with automation, clarity and intelligence."
+      [center]="true"
+    />
+
+    <div class="pts">
+      <div class="pts__col pts__col--problem" reveal>
+        <div class="pts__head">
+          <span class="material-icons-round">report_problem</span>
+          <h3>Business Problems</h3>
+        </div>
+        <ul>
+          @for (p of problems; track p.label) {
+            <li>
+              <span class="pts__icon"><span class="material-icons-round">{{ p.icon }}</span></span>
+              {{ p.label }}
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="pts__arrow" reveal [revealDelay]="120">
+        <span class="material-icons-round">trending_flat</span>
+      </div>
+
+      <div class="pts__col pts__col--solution" reveal [revealDelay]="180">
+        <div class="pts__head">
+          <span class="material-icons-round">verified</span>
+          <h3>Our Solutions</h3>
+        </div>
+        <ul>
+          @for (s of solutions; track s.label) {
+            <li>
+              <span class="pts__icon"><span class="material-icons-round">{{ s.icon }}</span></span>
+              {{ s.label }}
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<app-testimonials />
+
+<!-- ================= CTA ================= -->
+<section class="section--tight" style="padding-top: 0">
+  <app-cta-section />
+</section>

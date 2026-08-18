@@ -1,0 +1,47 @@
+<header class="site-header" [class.is-scrolled]="scrolled()">
+  <div class="container header__inner">
+    <a routerLink="/" class="brand" (click)="closeMenu()" aria-label="Veylix Tech home">
+      <span class="brand__mark">
+        <span class="brand__mark-text">VT</span>
+      </span>
+      <span class="brand__name">
+        <strong>{{ company.shortName }}</strong>
+        <small>Custom Software &amp; AI</small>
+      </span>
+    </a>
+
+    <nav class="nav" [class.is-open]="menuOpen()" aria-label="Primary">
+      <ul class="nav__list">
+        @for (link of links; track link.path) {
+          <li>
+            <a
+              [routerLink]="link.path"
+              routerLinkActive="is-active"
+              [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+              (click)="closeMenu()"
+            >
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+      <a routerLink="/contact" class="btn btn-primary nav__cta" (click)="closeMenu()">
+        Get Free Consultation
+      </a>
+    </nav>
+
+    <button
+      class="burger"
+      [class.is-open]="menuOpen()"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  @if (menuOpen()) {
+    <div class="nav__backdrop" (click)="closeMenu()"></div>
+  }
+</header>

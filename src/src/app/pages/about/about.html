@@ -1,0 +1,97 @@
+<app-page-hero
+  eyebrow="About Us"
+  title="About Veylix Tech"
+  subtitle="A software and AI company helping businesses replace manual operations with secure, scalable and intelligent digital platforms."
+/>
+
+<section class="section">
+  <div class="container about">
+    <div class="about__left" reveal>
+      <span class="eyebrow">About Us</span>
+      <h2 class="about__title">
+        Engineering trusted software for <span class="text-gradient">modern enterprises</span>
+      </h2>
+      @for (para of intro; track para) {
+        <p class="about__text muted">{{ para }}</p>
+      }
+
+      <div class="about__highlights">
+        @for (item of highlights; track item.title) {
+          <div class="about__highlight">
+            <span class="about__highlight-icon">
+              <span class="material-icons-round">{{ item.icon }}</span>
+            </span>
+            <div>
+              <h4>{{ item.title }}</h4>
+              <p class="muted">{{ item.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="about__right" reveal [revealDelay]="150">
+      <div class="about__card">
+        <div class="about__card-glow"></div>
+        <div class="about__card-head">
+          <span class="about__card-mark">VT</span>
+          <div>
+            <strong>{{ company.shortName }}</strong>
+            <small>{{ company.tagline }}</small>
+          </div>
+        </div>
+        <div class="about__stats">
+          @for (s of stats; track s.label) {
+            <div class="about__stat">
+              <strong class="text-gradient">{{ s.value }}</strong>
+              <span>{{ s.label }}</span>
+            </div>
+          }
+        </div>
+        <div class="about__badges">
+          <span><span class="material-icons-round">verified</span> Custom Solution Approach</span>
+          <span><span class="material-icons-round">psychology</span> AI-First Engineering</span>
+          <span><span class="material-icons-round">shield</span> Reliable Delivery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Leadership -->
+<section class="section section--mist">
+  <div class="container">
+    <div class="leadership__head" reveal>
+      <span class="eyebrow">Leadership</span>
+      <h2 class="leadership__title">Meet the founders</h2>
+      <p class="muted leadership__subtitle">
+        Veylix Tech is led by a team that blends engineering depth with a genuine commitment
+        to client success.
+      </p>
+    </div>
+
+    <div class="leadership">
+      @for (person of founders; track person.name; let i = $index) {
+        <article class="leader" reveal [revealDelay]="i * 100">
+          <span class="leader__avatar">{{ person.initials }}</span>
+          <div class="leader__meta">
+            <h3>{{ person.name }}</h3>
+            <span class="leader__role">{{ person.role }}</span>
+          </div>
+          <p class="muted">{{ person.bio }}</p>
+          @if (person.email) {
+            <a class="leader__email" [href]="'mailto:' + person.email">
+              <span class="material-icons-round">mail</span> {{ person.email }}
+            </a>
+          }
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<app-testimonials />
+
+<section class="section--tight" style="padding-top: 0">
+  <app-cta-section />
+</section>

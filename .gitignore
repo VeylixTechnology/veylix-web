@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Build outputs
+dist/
+out-tsc/
+.angular/
+*.js.map
+*.d.ts.map
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Server
+server.log

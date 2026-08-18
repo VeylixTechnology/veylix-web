@@ -1,0 +1,47 @@
+<app-page-hero
+  eyebrow="Why Veylix Tech"
+  title="A technology partner you can build the future with"
+  subtitle="We combine deep engineering expertise, financial domain knowledge and modern AI to deliver solutions that truly move the needle."
+/>
+
+<section class="section">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Our strengths"
+      title="Reasons businesses choose us"
+      subtitle="More than a vendor — a committed partner invested in your long-term success."
+      [center]="true"
+    />
+
+    <div class="grid grid-4">
+      @for (reason of reasons; track reason.title; let i = $index) {
+        <article class="card why-card" reveal [revealDelay]="(i % 4) * 70">
+          <div class="card-icon">
+            <span class="material-icons-round">{{ reason.icon }}</span>
+          </div>
+          <h3>{{ reason.title }}</h3>
+          <p class="muted">{{ reason.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Tagline banner -->
+<section class="section--tight">
+  <div class="container">
+    <div class="values" reveal>
+      <div class="values__glow"></div>
+      <span class="material-icons-round values__icon">spa</span>
+      <h2 class="values__title">{{ company.tagline }}</h2>
+      <p class="values__text">
+        Our name reflects our belief: technology should be grounded in strong values —
+        integrity, reliability and genuine care for the outcomes we create together.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top: 0">
+  <app-cta-section />
+</section>

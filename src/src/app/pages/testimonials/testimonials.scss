@@ -1,0 +1,65 @@
+.tcard {
+  position: relative;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 34px 30px 28px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.35s var(--ease), background 0.35s var(--ease),
+    border-color 0.35s var(--ease);
+  overflow: hidden;
+}
+.tcard:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(201, 165, 78, 0.5);
+}
+.tcard__quote {
+  font-size: 48px !important;
+  color: var(--gold-400);
+  opacity: 0.5;
+  line-height: 1;
+}
+.tcard blockquote {
+  margin: 12px 0 24px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+.tcard__author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.tcard__avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--gradient-gold);
+  color: var(--navy-900);
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.tcard__meta strong {
+  display: block;
+  color: #fff;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.98rem;
+}
+.tcard__meta small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.84rem;
+}
+.tcard__stars {
+  margin-top: 18px;
+  display: flex;
+  gap: 2px;
+}
+.tcard__stars .material-icons-round {
+  font-size: 18px;
+  color: var(--gold-400);
+}

@@ -1,0 +1,31 @@
+<section id="testimonials" class="section section--navy">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Testimonials"
+      title="Trusted by teams who value results"
+      subtitle="What organizations say about partnering with Veylix Tech."
+      [center]="true"
+    />
+
+    <div class="grid grid-3">
+      @for (t of testimonials; track t.name; let i = $index) {
+        <figure class="tcard" reveal [revealDelay]="i * 90">
+          <span class="tcard__quote material-icons-round">format_quote</span>
+          <blockquote>{{ t.quote }}</blockquote>
+          <figcaption class="tcard__author">
+            <span class="tcard__avatar">{{ t.initials }}</span>
+            <span class="tcard__meta">
+              <strong>{{ t.name }}</strong>
+              <small>{{ t.role }}</small>
+            </span>
+          </figcaption>
+          <div class="tcard__stars">
+            @for (star of [1, 2, 3, 4, 5]; track star) {
+              <span class="material-icons-round">star</span>
+            }
+          </div>
+        </figure>
+      }
+    </div>
+  </div>
+</section>

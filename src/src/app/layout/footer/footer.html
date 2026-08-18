@@ -1,0 +1,76 @@
+<footer class="footer">
+  <div class="footer__glow"></div>
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a routerLink="/" class="brand">
+        <span class="brand__mark"><span>VT</span></span>
+        <span class="brand__name">{{ company.shortName }}</span>
+      </a>
+      <p class="footer__tag">{{ company.footerTagline }}</p>
+      <p class="footer__values">
+        <span class="material-icons-round">spa</span> {{ company.tagline }}
+      </p>
+      <div class="socials">
+        <a [href]="company.linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <span class="material-icons">business</span>
+        </a>
+        <a [href]="company.github" target="_blank" rel="noopener" aria-label="GitHub">
+          <span class="material-icons">code</span>
+        </a>
+        <a [href]="whatsappLink" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <span class="material-icons">chat</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <ul>
+        @for (link of links; track link.path) {
+          <li><a [routerLink]="link.path">{{ link.label }}</a></li>
+        }
+        <li><a routerLink="/process">Process</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Capabilities</h4>
+      <ul>
+        <li><a routerLink="/services">Custom Software</a></li>
+        <li><a routerLink="/services">Financial Applications</a></li>
+        <li><a routerLink="/solutions">Business Automation</a></li>
+        <li><a routerLink="/services">AI & LLM Solutions</a></li>
+        <li><a routerLink="/technologies">DevOps & Cloud</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col footer__contact">
+      <h4>Get in touch</h4>
+      <ul>
+        <li>
+          <span class="material-icons-round">mail</span>
+          <a [href]="mailtoLink">{{ company.email }}</a>
+        </li>
+        <li>
+          <span class="material-icons-round">call</span>
+          <a [href]="'tel:' + company.phone">{{ company.phone }}</a>
+        </li>
+        <li>
+          <span class="material-icons-round">chat</span>
+          <a [href]="whatsappLink" target="_blank" rel="noopener">{{ company.whatsappDisplay }}</a>
+        </li>
+        <li>
+          <span class="material-icons-round">place</span>
+          <span>{{ company.location }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bar">
+    <div class="container footer__bar-inner">
+      <p>&copy; {{ year }} {{ company.name }}. All rights reserved.</p>
+      <p class="footer__made">Custom Software. Intelligent Solutions. Real Business Impact.</p>
+    </div>
+  </div>
+</footer>

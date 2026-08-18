@@ -1,0 +1,53 @@
+<app-page-hero
+  eyebrow="Solutions"
+  title="Business solutions that transform how you operate"
+  subtitle="Outcome-focused solutions that automate processes, centralize data and bring intelligence to your everyday decisions."
+/>
+
+<section class="section">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Business solutions"
+      title="Solve real operational challenges"
+      subtitle="Each solution targets a specific business pain — delivering measurable efficiency, visibility and control."
+      [center]="true"
+    />
+
+    <div class="grid grid-3">
+      @for (sol of solutions; track sol.title; let i = $index) {
+        <article class="card solution-card" reveal [revealDelay]="(i % 3) * 80">
+          <div class="card-icon">
+            <span class="material-icons-round">{{ sol.icon }}</span>
+          </div>
+          <h3>{{ sol.title }}</h3>
+          <p class="muted">{{ sol.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Industries -->
+<section class="section section--navy">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Industries we serve"
+      title="Domain experience across sectors"
+      subtitle="We tailor every engagement to the realities and regulations of your industry."
+      [center]="true"
+    />
+
+    <div class="industries">
+      @for (ind of industries; track ind.name; let i = $index) {
+        <div class="industry" reveal [revealDelay]="(i % 5) * 60">
+          <span class="material-icons-round">{{ ind.icon }}</span>
+          <strong>{{ ind.name }}</strong>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top: 0">
+  <app-cta-section />
+</section>

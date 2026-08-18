@@ -1,0 +1,35 @@
+<app-page-hero
+  eyebrow="Development Process"
+  title="A proven process that delivers with confidence"
+  subtitle="A transparent, seven-stage journey that takes your idea from first conversation to a reliable, supported product."
+/>
+
+<section class="section">
+  <div class="container">
+    <app-section-heading
+      eyebrow="Development Process"
+      title="A proven process that delivers with confidence"
+      subtitle="A transparent, seven-stage journey from first conversation to a reliable, supported product."
+      [center]="true"
+    />
+    <div class="timeline">
+      <div class="timeline__line"></div>
+      @for (step of steps; track step.step) {
+        <div class="tstep" [class.tstep--right]="step.step % 2 === 0" reveal>
+          <div class="tstep__node">
+            <span class="material-icons-round">{{ step.icon }}</span>
+          </div>
+          <div class="tstep__card">
+            <span class="tstep__num">Step {{ step.step }}</span>
+            <h3>{{ step.title }}</h3>
+            <p class="muted">{{ step.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top: 0">
+  <app-cta-section />
+</section>

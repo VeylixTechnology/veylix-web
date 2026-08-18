@@ -1,0 +1,110 @@
+<app-page-hero
+  eyebrow="Contact"
+  title="Request a Free Consultation"
+  subtitle="Tell us about your project. We'll get back to you with clear next steps and ideas — no obligation."
+/>
+
+<section class="section">
+  <div class="container contact">
+    <!-- Left: info -->
+    <div class="contact__info" reveal>
+      <h2 class="contact__info-title">Let's start a conversation</h2>
+      <p class="muted contact__info-text">
+        Reach out through any channel below, or send us your details and we'll respond quickly.
+      </p>
+
+      <div class="contact__cards">
+        @for (card of contactCards; track card.label) {
+          <a
+            class="cc"
+            [href]="card.href"
+            [attr.target]="card.external ? '_blank' : null"
+            [attr.rel]="card.external ? 'noopener' : null"
+          >
+            <span class="cc__icon"><span class="material-icons-round">{{ card.icon }}</span></span>
+            <span class="cc__meta">
+              <small>{{ card.label }}</small>
+              <strong>{{ card.value }}</strong>
+            </span>
+          </a>
+        }
+      </div>
+
+      <div class="contact__values">
+        <span class="material-icons-round">spa</span>
+        {{ company.tagline }}
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="contact__form-wrap" reveal [revealDelay]="120">
+      <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <h3 class="contact__form-title">Send us your requirement</h3>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name *</label>
+            <input id="name" type="text" formControlName="name" placeholder="Your full name" />
+            @if (form.controls.name.touched && form.controls.name.invalid) {
+              <span class="form-error">Please enter your name.</span>
+            }
+          </div>
+
+          <div class="form-field">
+            <label for="company">Company Name</label>
+            <input id="company" type="text" formControlName="company" placeholder="Company (optional)" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Email *</label>
+            <input id="email" type="email" formControlName="email" placeholder="you@company.com" />
+            @if (form.controls.email.touched && form.controls.email.invalid) {
+              <span class="form-error">Enter a valid email address.</span>
+            }
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" formControlName="phone" placeholder="Phone (optional)" />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="service">Service Required *</label>
+          <select id="service" formControlName="service">
+            <option value="">Select a service...</option>
+            @for (service of services; track service) {
+              <option [value]="service">{{ service }}</option>
+            }
+          </select>
+          @if (form.controls.service.touched && form.controls.service.invalid) {
+            <span class="form-error">Please select a service.</span>
+          }
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message *</label>
+          <textarea
+            id="message"
+            rows="5"
+            formControlName="message"
+            placeholder="Tell us about your project, goals and timeline…"
+          ></textarea>
+          @if (form.controls.message.touched && form.controls.message.invalid) {
+            <span class="form-error">Please add a short message (10+ characters).</span>
+          }
+        </div>
+
+        <button type="submit" class="btn btn-primary contact__submit">
+          <span class="material-icons-round">send</span> Send Message
+        </button>
+        <p class="contact__note">
+          <span class="material-icons-round">lock</span>
+          Your details open directly in your email client — nothing is stored.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

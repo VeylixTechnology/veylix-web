@@ -1,0 +1,36 @@
+<app-page-hero
+  eyebrow="Our Services"
+  title="Software & AI services built around your business"
+  subtitle="A complete portfolio of custom software, financial and AI services — engineered to automate operations and unlock growth."
+/>
+
+<section class="section">
+  <div class="container">
+    <app-section-heading
+      eyebrow="What we offer"
+      title="Explore our services"
+      subtitle="From business platforms to advanced AI systems, choose the capabilities that move your organization forward."
+      [center]="true"
+    />
+
+    <div class="grid grid-3">
+      @for (service of services; track service.title; let i = $index) {
+        <article class="card service-card" reveal [revealDelay]="(i % 3) * 80">
+          <span class="service-card__tag">{{ service.category }}</span>
+          <div class="card-icon">
+            <span class="material-icons-round">{{ service.icon }}</span>
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p class="muted">{{ service.description }}</p>
+          <div class="service-card__foot">
+            <span class="material-icons-round">arrow_forward</span>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top: 0">
+  <app-cta-section />
+</section>
